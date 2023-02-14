@@ -14,7 +14,9 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class LoginPage {
 	
-public static WebDriver driver;
+	public static WebDriver driver;
+	
+	
 	@BeforeMethod
 	public void beforemethod() throws Exception {
 		
@@ -22,8 +24,7 @@ public static WebDriver driver;
 		 driver=new ChromeDriver();
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");  
 		
-        driver.manage().timeouts().implicitlyWait(7, TimeUnit.SECONDS);
-		driver.manage().window().fullscreen();
+        
 		Thread.sleep(2000);
 	}
 
@@ -39,6 +40,7 @@ public static WebDriver driver;
 
 public void loginfunction() throws Exception
 {
+	
 	
 	WebElement element=driver.findElement(By.xpath("//input[@placeholder='Username']"));
 	element.sendKeys("Admin");

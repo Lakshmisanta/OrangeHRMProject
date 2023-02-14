@@ -63,6 +63,7 @@ public void delete_details() throws Exception {
 	element=driver.findElement(By.xpath("//*[text()=' Yes, Delete ']"));
 			element.click();
 			Thread.sleep(5000);
+
 	
 	
 }
